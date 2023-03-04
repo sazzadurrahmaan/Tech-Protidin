@@ -1,0 +1,14 @@
+    
+    #navbar {
+        background-color: rgb(22, 19, 19);
+        color:rgb(228, 218, 218);
+        padding:10px;
+      }
+      #navbarList{
+        background-color: rgb(0, 38, 41);
+     
+      }
+      #navbarList li a{
+        color:rgb(228, 218, 218);
+      }
+    
