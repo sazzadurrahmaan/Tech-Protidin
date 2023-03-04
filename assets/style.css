@@ -1,6 +1,6 @@
-    * {
-      margin: 0 auto;
-      padding: 0 auto;
+body, * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
@@ -50,6 +50,45 @@ justify-content: center;
 width:100%;
 margin-left: 50;
     }
+    #readMButton{
+      background-color: hsl(5, 85%, 63%);
+      padding:10px;
+      border-radius:10px;
+      color:aliceblue;
+      border: none;
+    }
+    #readMButton:hover{
+      color:hsl(36, 100%, 99%);
+letter-spacing:2px;
+padding: 15px;
+    }
     #article{
       margin-top:30px;
     }
+    .card-body{
+      display: flex;
+      justify-content: center;
+    }
+    .cardText{
+      margin-left:10px;
+      color: hsl(236, 13%, 42%)
+    }
+    .cardText h4{
+      color: hsl(240, 100%, 5%)
+    }
+    .eachText{
+      color:hsl(36, 100%, 99%);
+      position: relative;
+      
+    }
+    .eachText::after{
+      content: '';
+      position: absolute;
+      display: block;
+      height: 2px;
+      background-color: hsl(233, 8%, 79%);
+      left: 0;
+      bottom: -10px;
+      width: 100%;
+    }
+    
