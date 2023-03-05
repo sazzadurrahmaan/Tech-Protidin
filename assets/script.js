@@ -26,26 +26,22 @@ const displayData = (sources)=>{
    });
   
 }
-document.getElementById('readMButton').addEventListener("click",()=>{
-   fetch("https://newsapi.org/v2/everything?q=bitcoin&apiKey=ee3a2bf5ce504d70b7438f077347e345")
-   .then(res => res.json())
-   .then(data => displayReadMore(data.articles))
+loadUrl();
+
+document.getElementById("readMButton").addEventListener('click',()=>{
+    fetch('https://newsapi.org/v2/everything?q=bitcoin&apiKey=ee3a2bf5ce504d70b7438f077347e345')
+    .then(res => res.json())
+    .then(data => displayReadMore(data.articles))
 })
-const displayReadMore = (elements)=>{
-    const displayContainer = document.getElementById('readMore');
-    elements.forEach(element => {
-        const newCard = document.createElement('div');
 
-       newCard.innerHTML = `
-       <div>
-       <a href="${element.url}" target="_blank"></a>
-       <p>${element.description}</p>
-       </div>
-        `
-        displayContainer.appendChild(newCard);
-    });
-        
-   
+const displayReadMore = (elements) =>{
+const readMore = document.getElementById('readMore');
+elements.forEach(element =>{
+    const newReadMore = document.createElement('div');
+    newReadMore.innerHTML= `
+    <p>${element.description}</p>
+
+    `
+    readMore.appendChild(newReadMore);
+})
 }
-
-
